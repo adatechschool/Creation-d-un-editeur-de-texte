@@ -1,7 +1,9 @@
-from PyQt5.QtWidgets import QApplication, QLabel
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+
 with open ("ipsum", "r") as fichier:
-    pass
-app = QApplication([])
-label = QLabel("Hello world!")
-label.show()
-app.exec_()
+    app = QApplication([])
+    label = QLabel(fichier.read())
+    label.show()
+    app.exec_()
